@@ -48,6 +48,9 @@ Below are few observations:
 
 ## Resources
 . Object Detection on Google Colab: https://medium.com/swlh/tensorflow-2-object-detection-api-with-google-colab-b2af171e81cc
+
 . Step by Step Guide to Object Detection: https://www.dlology.com/blog/how-to-train-an-object-detection-model-easy-for-free/
+
 . Car Plate Number Recogniser: https://github.com/theAIGuysCode/yolov4-custom-functions
+
 . Extracting Text using OCRopus: https://www.danvk.org/2015/01/09/extracting-text-from-an-image-using-ocropus.html
