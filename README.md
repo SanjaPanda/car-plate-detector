@@ -40,13 +40,23 @@ In this step trained the model to detect lisence plate number:
 Steps to extract plate number from images:
 
 . Detected car plates, with a threshold of 0.6
+
 . Cropped images based on thershold.
+
 . Cleaned the images, converted image to gray scale. Resized image and smoothened it.
+
 . Used OCRopus and performed binning on the image. Didn't use segmentation as the letters were getting converted in the middle hence would have hindered detection.
+
 . This binned image was used to extract text from image using pyTesseract. OCRopus was throwing error due to too much segments in the image.
+
 . Once the string was extracted, performmed preprocessing on the same to extract alpha-numeric charecters.
 
 ## Evaluation
+. Object Detection evaluation:
+	mAP: 0.493867
+	mAR: 0.549057
+. Evaluation of text recognition:
+![Evaluation](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Recog_Eval.png)
 
 
 ## Solution
