@@ -16,7 +16,7 @@ Model for object detection is linked [here](https://github.com/tensorflow/models
 
 ## Project Architecture:
 Following is the architecture we followed:
-Insert Image
+![Project Architecture](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Architechture.PNG)
 
 ## Data Wrangling:
 In this step prepared the files for transfer learning of model:
@@ -47,18 +47,20 @@ Steps to extract plate number from images:
 . Once the string was extracted, performmed preprocessing on the same to extract alpha-numeric charecters.
 
 ## Evaluation
-![Project Architecture](https://github.com/SanjaPanda/Online-Shopper-Intention-Capstone/blob/master/figure/pie.png)
 
-##Solution
-![Project Architecture](https://github.com/SanjaPanda/Online-Shopper-Intention-Capstone/blob/master/figure/pie.png)
-![Project Architecture](https://github.com/SanjaPanda/Online-Shopper-Intention-Capstone/blob/master/figure/pie.png)
-![Project Architecture](https://github.com/SanjaPanda/Online-Shopper-Intention-Capstone/blob/master/figure/pie.png)
+
+## Solution
+
+![Solution](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Cars386.png)
+![Solution](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Cars428.png)
 
 ## Observations
 Below are few observations:
 
 . The threshold is set higher ie. 0.6 because even if plates are detected. Because with lower threshold, images detected are highly pixalated.
 . Some charecters are getting jumbled eg. '8' and 'B'.
+. Many a times images within the plates, don't help getting results.
+. Adding rules to preprocessing extracted images.
 
 ## Resources
 . Object Detection on Google Colab: https://medium.com/swlh/tensorflow-2-object-detection-api-with-google-colab-b2af171e81cc
