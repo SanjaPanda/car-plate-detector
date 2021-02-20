@@ -56,7 +56,7 @@ Steps to extract plate number from images:
 	mAP: 0.493867
 	mAR: 0.549057
 . Evaluation of text recognition:
-![Evaluation](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Recog_Eval.png)
+![Evaluation](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Recog_Eval.PNG)
 
 
 ## Solution
