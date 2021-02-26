@@ -9,13 +9,14 @@ Aim is to detect car plate numbers from images. This problem can be be split int
 2. Extrating text from detected images.
 
 ## Data: 
-Data was collected from Kaggle, linked it [here](https://www.kaggle.com/andrewmvd/car-plate-detection). \n
+Data was collected from Kaggle, linked it [here](https://www.kaggle.com/andrewmvd/car-plate-detection). /n
 This dataset contains 433 images with bounding box annotations of the car license plates within the image.
-Annotations are provided in the PASCAL VOC format. \n
+Annotations are provided in the PASCAL VOC format. /n
 Model for object detection is linked [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md).
 
 ## Project Architecture:
 Following is the architecture we followed:
+
 ![Project Architecture](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Architechture.PNG)
 
 ## Data Wrangling:
@@ -24,7 +25,7 @@ In this step prepared the files for transfer learning of model:
 1. Create a directory with appropriate folders as per requirement. And load it on Google Drive.
 2. Create label_map.pbtxt file.
 3. Create XML to CSV files for both train and test dataset. These files would be used to create TFRecords.
-4. Unpack zip file and create a copy of pipeline.config in new model folder. Model used is 'SSD MobileNet V2 FPNLite 640x640'.
+4. Unpack zip file and create a copy of pipeline.config in new model folder. Model used is **'SSD MobileNet V2 FPNLite 640x640'**.
 5. Edit pipeline.config file.
 
 ## Tranfer Learning and Model Training:
@@ -39,37 +40,34 @@ In this step trained the model to detect lisence plate number:
 ## Car Plate Number Extraction
 Steps to extract plate number from images:
 
-. Detected car plates, with a threshold of 0.6
-
-. Cropped images based on thershold.
-
-. Cleaned the images, converted image to gray scale. Resized image and smoothened it.
-
-. Used OCRopus and performed binning on the image. Didn't use segmentation as the letters were getting converted in the middle hence would have hindered detection.
-
-. This binned image was used to extract text from image using pyTesseract. OCRopus was throwing error due to too much segments in the image.
-
-. Once the string was extracted, performmed preprocessing on the same to extract alpha-numeric charecters.
+1. Detected car plates, with a threshold of 0.6
+2.  Cropped images based on thershold.
+3. Cleaned the images, converted image to gray scale. Resized image and smoothened it.
+4. Used **OCRopus** and performed binning on the image. Didn't use segmentation as the letters were getting converted in the middle hence would have hindered detection.
+5. This binned image was used to extract text from image using **pyTesseract**. OCRopus was throwing error due to too much segments in the image.
+6. Once the string was extracted, performmed preprocessing on the same to extract alpha-numeric charecters.
 
 ## Evaluation
-. Object Detection evaluation:
-	mAP: 0.493867
-	mAR: 0.549057
+. Object Detection evaluation: \n
+	\t\t mAP: 0.493867 \n
+	\t\t mAR: 0.549057 \n
 . Evaluation of text recognition:
+
 ![Evaluation](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Recog_Eval.PNG)
 
 
 ## Solution
 
 ![Solution](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Cars386.png)
+
 ![Solution](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Cars428.png)
 
 ## Observations
 Below are few observations:
 
-. The threshold is set higher ie. 0.6 because even if plates are detected. Because with lower threshold, images detected are highly pixalated.
-. Some charecters are getting jumbled eg. '8' and 'B'.
-. Many a times images within the plates, don't help getting results.
+. The threshold is set higher ie. 0.6 because even if plates are detected. Because with lower threshold, images detected are highly pixalated.\n
+. Some charecters are getting jumbled eg. '8' and 'B'.\n
+. Many a times images within the plates, don't help getting results.\n
 . Adding rules to preprocessing extracted images.
 
 ## Resources
