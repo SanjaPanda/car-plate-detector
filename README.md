@@ -9,10 +9,10 @@ Aim is to detect car plate numbers from images. This problem can be be split int
 2. Extrating text from detected images.
 
 ## Data: 
-Data was collected from Kaggle, linked it [here](https://www.kaggle.com/andrewmvd/car-plate-detection). /n
+Data was collected from Kaggle, linked it [here](https://www.kaggle.com/andrewmvd/car-plate-detection). <br />
 This dataset contains 433 images with bounding box annotations of the car license plates within the image.
-Annotations are provided in the PASCAL VOC format. /n
-Model for object detection is linked [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md).
+Annotations are provided in the PASCAL VOC format. <br />
+Model for object detection is linked [here](https://github.com_ensorflow/models/blob/master/research/object_detection/g3doc_f2_detection_zoo.md).
 
 ## Project Architecture:
 Following is the architecture we followed:
@@ -48,9 +48,9 @@ Steps to extract plate number from images:
 6. Once the string was extracted, performmed preprocessing on the same to extract alpha-numeric charecters.
 
 ## Evaluation
-. Object Detection evaluation: \n
-	\t\t mAP: 0.493867 \n
-	\t\t mAR: 0.549057 \n
+. Object Detection evaluation: <br />
+	__ mAP: 0.493867 <br />
+	__ mAR: 0.549057 <br />
 . Evaluation of text recognition:
 
 ![Evaluation](https://github.com/SanjaPanda/car-plate-detector/blob/main/images/Recog_Eval.PNG)
@@ -65,16 +65,16 @@ Steps to extract plate number from images:
 ## Observations
 Below are few observations:
 
-. The threshold is set higher ie. 0.6 because even if plates are detected. Because with lower threshold, images detected are highly pixalated.\n
-. Some charecters are getting jumbled eg. '8' and 'B'.\n
-. Many a times images within the plates, don't help getting results.\n
+. The threshold is set higher ie. 0.6 because even if plates are detected. Because with lower threshold, images detected are highly pixalated.<br />
+. Some charecters are getting jumbled eg. '8' and 'B'.<br />
+. Many a times images within the plates, don't help getting results.<br />
 . Adding rules to preprocessing extracted images.
 
 ## Resources
-. Object Detection on Google Colab: https://medium.com/swlh/tensorflow-2-object-detection-api-with-google-colab-b2af171e81cc
+. Object Detection on Google Colab: https://medium.com/swlh_ensorflow-2-object-detection-api-with-google-colab-b2af171e81cc
 
 . Step by Step Guide to Object Detection: https://www.dlology.com/blog/how-to-train-an-object-detection-model-easy-for-free/
 
-. Car Plate Number Recogniser: https://github.com/theAIGuysCode/yolov4-custom-functions
+. Car Plate Number Recogniser: https://github.com_heAIGuysCode/yolov4-custom-functions
 
 . Extracting Text using OCRopus: https://www.danvk.org/2015/01/09/extracting-text-from-an-image-using-ocropus.html
